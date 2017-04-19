@@ -4,6 +4,21 @@
 # Defaults.
 .PHONY: runserver dropdb flushdb syncdb reseed resetdb dbshell flushcache configcache fix-http-perm release-ui npm-deps lang shell test test-api test-ui images deploy-local deploy-dev deploy-prod clean workers help docs
 
+# Do a first time install
+install:
+	# Will run workers-install
+	# setupdb
+	# syncdb
+	# reseed
+	# workers-install
+	# workers-configure
+	echo "Not implemented error"
+
+# Update repo (git pull) then restart services & server
+update:
+	echo "Not implemented error"
+
+# 
 # Run the development server.
 runserver:
 	echo "Not implemented error"
@@ -16,6 +31,10 @@ dropdb:
 flushdb:
 	echo "Not implemented error"
 
+# Set up database and create users and do initial database schema
+setupdb:
+	echo "Not implemented error"
+	
 # Set up database schema (Migrations)
 syncdb:
 	echo "Not implemented error"
@@ -95,10 +114,21 @@ deploy-prod:
 clean:
 	find . \( -name "*.py[co]" -o -name "*~" -o -name "*.core" \) -delete
 
-# Worker to handle tasks.
-workers:
+# Workers stopping and starting
+workers-stop:
+	echo "Not implemented error"
+workers-start:
 	echo "Not implemented error"
 
+# Make daemons in init.d
+workers-install:
+	echo "Not implemented error"
+
+# Configure the workers auth and credential files
+workers-configure:
+	echo "Not implemented error"
+
+# help
 help:
 	echo "Not implemented error"
 
